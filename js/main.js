@@ -90,6 +90,7 @@ function actualizarBotonesAgregar() {
 
    botonesAgregar.forEach(boton => {
        boton.addEventListener("click", agregarAlCarrito);
+      
    });
 }
 
@@ -105,6 +106,13 @@ if (productosEnCarritoLS) {
 }
 
 function agregarAlCarrito(e) {
+    Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: 'se agrego al carrito',
+        showConfirmButton: false,
+        timer: 1000
+      });
    const idBoton = e.currentTarget.id;
    const productoAgregado = productos.find(producto => producto.id === idBoton);
 

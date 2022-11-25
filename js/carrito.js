@@ -71,6 +71,13 @@ function actualizarBotonesEliminar() {
 }
 
 function eliminarDelCarrito(e) {
+    Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: 'el producto fue eliminado',
+        showConfirmButton: false,
+        timer: 1500
+      });
     const idBoton = e.currentTarget.id;
     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
     
