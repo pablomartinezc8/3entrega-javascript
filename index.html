@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>intercomers|shop</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./css/main.css">
-</head>
+    <link rel="stylesheet" href="./css/main.css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 <body>
 
     <div class="wrapper">
         <aside>
             <header>
+                <div id="WidgetTutiempo"></div>
+                <div id="hora" class="hora"></div>
                 <h1 class="logo">intercomers</h1>
             </header>
             <nav>
@@ -27,21 +29,32 @@
                     </li>
                 </ul>
             </nav>
+
             <footer>
+                <p id="hora"></p>
                 <p class="texto-footer">© 2022 hecho en curso de javascript</p>
+            
             </footer>
         </aside>
         <main>
+            
             <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
             <div id="contenedor-productos" class="contenedor-productos">
-                <!-- Esto se va a rellenar con JS -->
             </div>
+            <div class="col">
+              <h2 class="titulo" id="titulo">usuarios que ya probaron nuestros productos</h2>
+            <ul id="lista-usuarios" class="lista-usuarios"></ul>
+            <ul id="time"></ul>
+          </div>
         </main>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

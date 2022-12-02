@@ -1,3 +1,6 @@
+
+
+
 let productosEnCarrito = localStorage.getItem("productos-en-carrito");
 productosEnCarrito = JSON.parse(productosEnCarrito);
 
@@ -22,7 +25,6 @@ function cargarProductosCarrito() {
         contenedorCarritoProductos.innerHTML = "";
     
         productosEnCarrito.forEach(producto => {
-    
             const div = document.createElement("div");
             div.classList.add("carrito-producto");
             div.innerHTML = `
@@ -48,7 +50,7 @@ function cargarProductosCarrito() {
     
             contenedorCarritoProductos.append(div);
         })
-    
+         
     } else {
         contenedorCarritoVacio.classList.remove("disabled");
         contenedorCarritoProductos.classList.add("disabled");
@@ -90,6 +92,7 @@ function eliminarDelCarrito(e) {
 
 botonVaciar.addEventListener("click", vaciarCarrito);
 function vaciarCarrito() {
+
     productosEnCarrito.length = 0;
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
     cargarProductosCarrito();
@@ -103,7 +106,6 @@ function actualizarTotal() {
 
 botonComprar.addEventListener("click", comprarCarrito);
 function comprarCarrito() {
-    
     productosEnCarrito.length = 0;
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
     contenedorCarritoVacio.classList.add("disabled");
@@ -117,6 +119,4 @@ function comprarCarrito() {
         showConfirmButton: false,
         timer: 1500
       });
-
-
 }
