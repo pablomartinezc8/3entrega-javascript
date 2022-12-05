@@ -59,8 +59,9 @@ const productos = [
  let botonesAgregar = document.querySelectorAll(".producto-agregar");
  const numerito = document.querySelector("#numerito");
  const divHora= document.querySelector("#hora");
+
  const DateTime=luxon.DateTime
- const dtiso= DateTime.fromISO("2022-07-31T08:30:00")
+ const dtiso= DateTime.fromISO("2018-07-31T08:30:00")
  console.log(dtiso.toString());
      
  console.log("año: "+dtiso.year)
@@ -69,9 +70,12 @@ const productos = [
  console.log("hora: "+dtiso.hour)
  
  divHora.innerHTML=`
- <h3>${dtiso.day}/</h3>
- <h3>${dtiso.month}/</h3>
- <h3>${dtiso.year}</h3>
+ <div class="titulo-hora">
+ <p>las mejores prendas desde</p>
+ </div>
+ <div>
+ <h3>${dtiso.day}/${dtiso.month}/${dtiso.year}</h3>
+ </div>
  `;
  
  

@@ -279,31 +279,47 @@ main {
 .disabled {
     display: none;
 }
-.hora{
+.hora {
+    color: greenyellow;
     display: flex;
+    flex-direction: column;
 }
+
+
 .hora h3{
+    
     font-size: 50px;
 margin: 0px 5px;
 }
+
 .lista-usuarios {
     margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .lista-usuarios li{
     display: flex;
     border-bottom: 5px yellowgreen solid;
     margin: 20px 0px;
 }
+
 .titulo {
     margin-bottom: 10px;
     margin-top: 20px;
     text-align: center;
     font-size: 35px;
 }
-.col{
+
+.col {
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 40px;
     background-color: black;
     color: #e2e2e2;
+}
+
+.titulo-hora p{
+    font-size: 25px;
 }
